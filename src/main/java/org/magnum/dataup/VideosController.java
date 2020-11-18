@@ -112,6 +112,11 @@ public class VideosController {
 		}
 	 }
 	
+	@RequestMapping(value="/video/person", method=RequestMethod.GET)
+	public @ResponseBody void getData(@RequestParam("name") String name,  HttpServletResponse response) throws IOException {
+		response.getWriter().append("Hello"+name);
+	 }
+	
 	/**
 	 * Get the data URL for a videoId
 	 * @param videoId
